@@ -4,7 +4,6 @@ boto
 aaargh
 grandfatherson
 PyYaml
-byteformat
 pycrypto
 requests
 sh

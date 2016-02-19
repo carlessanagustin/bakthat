@@ -20,7 +20,7 @@ import yaml
 from beefish import decrypt, encrypt_file
 import aaargh
 import grandfatherson
-from byteformat import ByteFormatter
+#from byteformat import ByteFormatter
 
 from bakthat.backends import GlacierBackend, S3Backend, RotationConfig, SwiftBackend
 from bakthat.conf import config, events, load_config, DEFAULT_DESTINATION, DEFAULT_LOCATION, CONFIG_FILE, EXCLUDE_FILES
@@ -393,11 +393,11 @@ def show(query="", destination="", tags="", profile="default", config=CONFIG_FIL
 
 
 def _display_backups(backups):
-    bytefmt = ByteFormatter()
+#    bytefmt = ByteFormatter()
     for backup in backups:
         backup = backup._data
         backup["backup_date"] = datetime.fromtimestamp(float(backup["backup_date"])).isoformat()
-        backup["size"] = bytefmt(backup["size"])
+#        backup["size"] = bytefmt(backup["size"])
         if backup.get("tags"):
             backup["tags"] = "({0})".format(backup["tags"])
 
